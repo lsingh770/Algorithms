@@ -28,7 +28,7 @@ public class LinkedList {
      */
     public void insertAtLastPos(int val) {
 
-        if(tail == null){
+        if (tail == null) {
             insertAtFirstPos(val);
             return;
         }
@@ -57,6 +57,41 @@ public class LinkedList {
         node.next = tmp.next;
         tmp.next = node;
     }
+
+    /**
+     * Merge two sorted lists
+     * Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+     */
+    public LinkedList mergeListSequential(LinkedList list1, LinkedList list2) {
+        var node1 = list1.head;
+        var node2 = list2.head;
+
+        var dummy = new Node(0);
+        var current = dummy;
+
+        while (node1 != null && node2 != null) {
+            if (node1.value <= node2.value) {
+                current.next = node1;
+                node1 = node1.next;
+            } else {
+                current.next = node2;
+                node2 = node2.next;
+            }
+            current = current.next;
+        }
+
+        if (node1 != null) {
+            current.next = node1;
+        }
+        if (node2 != null) {
+            current.next = node2;
+        }
+
+        var mergedList = new LinkedList();
+        mergedList.head = dummy.next;
+        return mergedList;
+    }
+
 
     /**
      * Method to display list
