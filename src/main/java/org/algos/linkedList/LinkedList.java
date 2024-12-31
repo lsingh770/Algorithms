@@ -58,6 +58,10 @@ public class LinkedList {
         tmp.next = node;
     }
 
+    /**
+     * Merge two sorted lists
+     * Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+     */
     public LinkedList mergeListSequential(LinkedList list1, LinkedList list2) {
         var node1 = list1.head;
         var node2 = list2.head;
