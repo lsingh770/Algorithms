@@ -7,8 +7,12 @@ import org.algos.linkedList.LinkedList;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and welcome!");
+        var bSearch = new BinarySearch();
         sampleForLinkedList();
         sampleForMergeList();
+        bSearch.search(new int[]{1,4,2,5,6}, 4);
+        bSearch.searchInsert(new int[]{1,4,5,6}, 2);
+        bSearch.nextGreatestLetter(new char[]{'x','x','y','y'}, 'z');
     }
 
     public static void sampleForLinkedList(){
