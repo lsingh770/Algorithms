@@ -26,6 +26,7 @@ To run the algorithms locally:
     ```bash
     java -cp build/classes/java/main <package_name>.<ClassName>
     ```
+    Replace `<package_name>` and `< ClassName >` with the appropriate values.
 ## Prerequisites
 
   **Java:** Ensure that Java is installed on your system. You can download it from Oracle's official website.
